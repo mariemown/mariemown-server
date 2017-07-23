@@ -4,6 +4,7 @@ class CreatePresentations < ActiveRecord::Migration[5.1]
     	t.string :subject
     	t.text :markdown
     	t.integer :views
+      t.references :account, index: true
 
       t.timestamps
     end
