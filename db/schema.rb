@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723144944) do
+ActiveRecord::Schema.define(version: 20170726122019) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 20170723144944) do
   end
 
   create_table "presentations", force: :cascade do |t|
-    t.string "subject"
-    t.text "markdown"
-    t.integer "views"
+    t.string "subject", null: false
+    t.text "markdown", null: false
+    t.integer "views", null: false
     t.integer "account_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
