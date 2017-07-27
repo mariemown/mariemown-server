@@ -1,10 +1,12 @@
 class PresentationsController < ApplicationController
   def index
     @presentations = Presentation.all
+    render json: @presentations
   end
 
   def show
-    Presentation.find(params[:id])
+    @presentation = Presentation.find(params[:id])
+    render json: @presentation
   end
 
   def create
