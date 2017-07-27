@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20170727152938) do
 
   create_table "presentations", force: :cascade do |t|
-    t.string "subject"
-    t.text "markdown"
-    t.integer "views"
+    t.string "subject", null: false
+    t.text "markdown", null: false
+    t.integer "views", default: 0, null: false
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
