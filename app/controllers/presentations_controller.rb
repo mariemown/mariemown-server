@@ -1,4 +1,6 @@
 class PresentationsController < ApplicationController
+  before_action :authenticate_user!, [:create]
+
   def index
     @presentations = Presentation.all
     render json: @presentations
