@@ -42,3 +42,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom dependencies
 gem 'devise'
+
+gem 'active_model_serializers', '~> 0.10.0'
