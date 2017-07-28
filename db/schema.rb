@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728115447) do
+ActiveRecord::Schema.define(version: 20170728151216) do
+
+  create_table "presentations", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "markdown", null: false
+    t.integer "views", default: 0, null: false
+    t.boolean "published", null: false
+    t.boolean "private", null: false
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_presentations_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
